@@ -1,17 +1,13 @@
 require 'active_record'
 require 'sinatra'
 require 'sinatra/activerecord'
-require 'pg'
-require './models'
 
-ActiveRecord::Base.establish_connection(
-  :adapter => 'postgresql',
-  :database => 'postgres',
-  # :username => 'postgres',
-  # :password => 'password',
-  :host => 'localhost'
-)
+require './models.rb'
 
-c = ActiveRecord::Base.connection
+get "/" do
+    params[:users] = User.all
+    erb :index
+end
+
 
 

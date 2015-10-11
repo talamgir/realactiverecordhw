@@ -1,2 +1,2 @@
-class President < ActiveRecord::Base
+class User < ActiveRecord::Base
 end

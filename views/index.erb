@@ -4,10 +4,16 @@
     </head>
 
     <body>
-        <p>length? <%= params[:users].length %></p>
+
+    	<script type="text/javascript">
+    		alert('Welcome user!')
+    	</script>
 
         <% params[:users].each do |u| %>
             <%= u.name %>
+            <br />
+            <%= u.email %>
+
         <% end %>
     </body>
 </html>
